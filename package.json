@@ -1,0 +1,49 @@
+{
+  "name": "@dhee_ai/openrouter-runners",
+  "version": "0.1.0",
+  "description": "Dhee Cloud media runners (dhee.cloud.image / dhee.cloud.video) that generate images and video through the Dhee Cloud media proxy.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "keywords": [
+    "dhee",
+    "dhee-runner",
+    "dhee-cloud",
+    "openrouter",
+    "image-generation",
+    "video-generation"
+  ],
+  "files": [
+    "runners",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    "./runners/dhee-cloud-image": "./runners/dhee-cloud-image/dist/index.js",
+    "./runners/dhee-cloud-video": "./runners/dhee-cloud-video/dist/index.js"
+  },
+  "scripts": {
+    "test": "node scripts/validate.mjs"
+  },
+  "dhee": {
+    "type": "runner",
+    "runnerDirs": [
+      "./runners/dhee-cloud-image",
+      "./runners/dhee-cloud-video"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dheeai/dhee-packages.git",
+    "directory": "openrouter-runners"
+  },
+  "bugs": {
+    "url": "https://github.com/dheeai/dhee-packages/issues"
+  },
+  "homepage": "https://github.com/dheeai/dhee-packages/tree/main/openrouter-runners#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
